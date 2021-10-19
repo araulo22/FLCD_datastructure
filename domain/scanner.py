@@ -5,9 +5,6 @@ from languagesetup import *
 
 class Scanner:
 
-    def __init__(self) -> None:
-        self.cases = ["=+", "<+", ">+", "<=+", ">=+", "==+", "!=+", "=-", "<-", ">-", "<=-", ">=-", "==-", "!=-"]
-
     def getStringToken(self, line, index):
         token = ''
         quotes = 0
