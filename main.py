@@ -5,7 +5,7 @@ from domain.pif import PIF
 from domain.scanner import Scanner
 from domain.languagesetup import *
 
-class Main:
+class Scan:
     def __init__(self):
         self.st = SymbolTable(16)
         self.pif = PIF()
@@ -40,7 +40,7 @@ class Main:
                     elif self.scanner.isConstant(tokens[i]):
                         const = self.st.add(extra + tokens[i])
                         extra = ''
-                        self.pif.add("const", const)
+                        self.pif.add("const " + tokens[i], const)
                     else:
                         error += "Error at token " + tokens[i] + " at line " + str(lines) + "\n"
 
@@ -55,5 +55,5 @@ class Main:
         else:
             print("no errors found")
 
-main = Main()
+main = Scan()
 main.run()

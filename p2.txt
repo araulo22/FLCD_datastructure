@@ -4,12 +4,12 @@ OK:bool;
 start
 read(X);
 D:=2;
-OK:=TRUE;
+OK:=1;
 while D < (X / 2) do
 start
 if (X % D) = 0 then
 start
-OK:=FALSE;
+OK:=0;
 D:=X;
 end
 else D:=D+1
