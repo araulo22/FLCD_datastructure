@@ -1,0 +1,18 @@
+let
+X, D:int;
+OK:bool;
+start
+read(X);
+D:=2;
+OK:=TRUE;
+while D < (X / 2) do
+start
+if (X % D) = 0 then
+start
+OK:=FALSE;
+D:=X;
+end
+else D:=D+1
+end
+write(OK);
+end

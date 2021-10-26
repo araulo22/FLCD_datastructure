@@ -34,7 +34,7 @@ class HashTable:
     def __str__(self) -> str:
         result = "Symbol Table\n"
         for i in range(self.__size):
-            result = result + str(i) + "->" + str(self.__items[i]) + "\n"
+            result = result + str(i) + " === " + str(self.__items[i]) + "\n"
         return result
 
     # returns the position of an element in the table

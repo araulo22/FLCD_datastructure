@@ -1,0 +1,28 @@
+let
+A, B, C:int;
+MIN, MAX:int;
+start
+read(A);
+MIN:=A;
+MAX:=A;
+read(B);
+if B > MAX then
+start
+MAX:=B;
+end
+else if B < MIN then
+start
+MIN:=B;
+end
+read(C);
+if C > MAX then
+start
+MAX:=C;
+end
+else if C < MIN then
+start
+MIN:=C;
+end
+write(MIN);
+write(MAX)
+end

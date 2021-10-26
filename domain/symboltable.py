@@ -1,4 +1,5 @@
-from hashtable import HashTable
+from domain import *
+from domain.hashtable import HashTable
 
 
 class SymbolTable:

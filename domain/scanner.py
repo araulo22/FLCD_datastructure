@@ -1,9 +1,12 @@
 import re
 
-from languagesetup import *
+from domain.languagesetup import operators, separators, reservedWords
 
 
 class Scanner:
+
+    def __init__(self):
+        self.accepted = ["=+", "<+", ">+", "<=+", ">=+", "==+", "!=+", "=-", "<-", ">-", "<=-", ">=-", "==-", "!=-"]
 
     def getStringToken(self, line, index):
         token = ''
@@ -66,7 +69,7 @@ class Scanner:
         return tokens
 
     def isIdentifier(self, token):
-        return re.match(r'^[a-z]([a-zA-Z]|[0-9])*$', token) is not None
+        return re.match(r'([A-Z_][A-Z0-9_]*)', token) is not None
 
     def isConstant(self, token):
         return re.match(r'^(0|[+-]?[1-9][0-9]*)$|^\'.\'$|^\'.*\'$', token) is not None

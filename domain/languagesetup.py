@@ -4,7 +4,7 @@ operators = []
 
 
 def read_file():
-    with open('tokens.in', 'r') as f:
+    with open('domain/tokens.in', 'r') as f:
         for i in range(16):
             reservedWords.append(f.readline().strip())
         for i in range(8):

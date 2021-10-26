@@ -1,0 +1,13 @@
+let
+X, N, SUM:int;
+start
+read(N);
+SUM:=0;
+while N > 0 do
+start
+read(X);
+SUM:=SUM+X;
+N:=N-1;
+end
+write(SUM);
+end
